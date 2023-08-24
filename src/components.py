@@ -18,6 +18,9 @@ def header(section: str, name: str = "Sahil Pattni") -> None:
         section (str): The section to be displayed in the header.
         name (str, optional): The name to be displayed in the header. Defaults to "Sahil Pattni".
     """
+    st.set_page_config(
+        page_title="Sahil Pattni",
+    )
     st.title(name)
     st.markdown(f"## {section}")
 
@@ -102,9 +105,45 @@ def education_card(
     st.divider()
 
 
-def copyright_footer():
+def experience_card(
+    title: str, company: str, duration: str, location: str, description: str
+) -> None:
     """
-    Generates the footer of the website.
+    Generates an experience card.
+
+    Args:
+        title (str): The title of the experience.
+        company (str): The company of the experience.
+        duration (str): The duration of the experience.
+        description (str): The description of the experience. Accepts markdown syntax.
+    """
+    st.markdown(
+        f'### <div style="color: {COLOR_SCHEME["theme"]["primaryColor"]};">{title}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(f"##### {company}")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(
+            f'###### <div style="text-align: left;">{location}</div>',
+            unsafe_allow_html=True,
+        )
+    with col2:
+        st.markdown(
+            f'###### <div style="text-align: right;">{duration}</div>',
+            unsafe_allow_html=True,
+        )
+
+    st.markdown(description)
+
+    st.divider()
+
+
+def format_page():
+    """
+    Applies custom styling to the page, and adds a copyright notice on
+    the sidebar and footer.
     """
 
     st.markdown(
