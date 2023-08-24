@@ -1,0 +1,11 @@
+title: Machine Learning Engineer Intern
+company: Rayca Precision
+location: Remote
+duration: Jun 2021 - Aug 2021
+description: |
+  * Developed a deep learning classifier trained on RNA sequence data to classify cancer subtypes, achieving a weighted average precision score of 96%.
+  * Engineered a data pipeline to compile RNA sequence data from various sources and formats.
+  * Applied ANOVA F-Tests and Chi-Squared feature selection techniques to improve model training time by 60%.
+  * Used MLFlow to optimize hyperparameter tuning, improving the model's accuracy by ≈ 20%.
+  * Built a RESTful API service to serve the model, via Flask.
+rank: 1
