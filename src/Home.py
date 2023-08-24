@@ -2,24 +2,17 @@ import streamlit as st
 import streamlit as st
 from PIL import Image
 
-from components import copyright_footer, PRIMARY_COLOR
+from components import format_page, PRIMARY_COLOR
 
 
-image = Image.open("resources/images/transparent.png")
-
-col1, col2 = st.columns(2)
-
-with col2:
-    # Add image to sidebar
-    # st.image(image, width=300)
-    pass
-
-with col1:
-    st.title("Sahil Pattni")
-    st.markdown(
-        f'### <div style="color: {PRIMARY_COLOR};">Software Developer</div>',
-        unsafe_allow_html=True,
-    )
+st.set_page_config(
+    page_title="Sahil Pattni",
+)
+st.title("Sahil Pattni")
+st.markdown(
+    f'### <div style="color: {PRIMARY_COLOR};">Software Developer</div>',
+    unsafe_allow_html=True,
+)
 st.markdown(
     """
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis lectus et felis elementum porta. Phasellus vitae malesuada ex. Nullam sodales, dolor dapibus tincidunt imperdiet, odio enim varius nibh, vel viverra nisl odio vitae dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus eget convallis purus, ac consectetur metus. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
@@ -28,4 +21,4 @@ st.markdown(
 )
 
 
-copyright_footer()
+format_page()

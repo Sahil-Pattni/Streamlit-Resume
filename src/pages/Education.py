@@ -1,4 +1,4 @@
-from components import copyright_footer, header, education_card
+from components import format_page, header, education_card
 import math
 import yaml
 import os
@@ -29,4 +29,4 @@ for university in universities:
         university["description"],
     )
 
-copyright_footer()
+format_page()

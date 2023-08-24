@@ -1,4 +1,4 @@
-from components import copyright_footer, header, project_card
+from components import format_page, header, project_card
 import math
 import yaml
 import os
@@ -30,4 +30,4 @@ for project in projects:
         project["url"],
     )
 
-copyright_footer()
+format_page()
