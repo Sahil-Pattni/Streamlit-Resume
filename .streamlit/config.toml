@@ -5,9 +5,24 @@
 # secondaryBackgroundColor="#526d82"
 # textColor="#f5f5fb"
 
-# # Dark Blue
+# # # Dark Blue
+# # [theme]
+# # primaryColor="#00adb5"
+# # backgroundColor="#222831"
+# # secondaryBackgroundColor="#393e46"
+# # textColor="#eeeeee"
+
+
+# # Light Beige x Orange
+# primaryColor="#F37A1F"
+# backgroundColor="#D0D0C4"
+# secondaryBackgroundColor="#D0D0C4"
+# textColor="#393939"
+
+
+# Light Grey x Blue
 [theme]
-primaryColor="#00adb5"
-backgroundColor="#222831"
-secondaryBackgroundColor="#393e46"
-textColor="#eeeeee"
+primaryColor="#3E61E3"
+backgroundColor="#D8D2D6"
+secondaryBackgroundColor="#D8D2D6"
+textColor="#000000"
