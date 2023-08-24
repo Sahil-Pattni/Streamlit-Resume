@@ -1,4 +1,4 @@
-from components import header, project_card
+from components import copyright_footer, header, project_card
 import math
 import yaml
 import os
@@ -29,3 +29,5 @@ for project in projects:
         project["description"],
         project["url"],
     )
+
+copyright_footer()

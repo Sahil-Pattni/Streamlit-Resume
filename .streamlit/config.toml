@@ -1,0 +1,13 @@
+# # Navy Blue Gradient
+# [theme]
+# primaryColor="#9db2bf"
+# backgroundColor="#27374d"
+# secondaryBackgroundColor="#526d82"
+# textColor="#f5f5fb"
+
+# # Dark Blue
+[theme]
+primaryColor="#00adb5"
+backgroundColor="#222831"
+secondaryBackgroundColor="#393e46"
+textColor="#eeeeee"

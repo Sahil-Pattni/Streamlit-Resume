@@ -1,4 +1,13 @@
 import streamlit as st
+import toml
+import os
+
+# Get color cheme
+COLOR_SCHEME = toml.load(".streamlit/config.toml")
+PRIMARY_COLOR = COLOR_SCHEME["theme"]["primaryColor"]
+BACKGROUND_COLOR = COLOR_SCHEME["theme"]["backgroundColor"]
+SECONDARY_BACKGROUND_COLOR = COLOR_SCHEME["theme"]["secondaryBackgroundColor"]
+TEXT_COLOR = COLOR_SCHEME["theme"]["textColor"]
 
 
 def header(section: str, name: str = "Sahil Pattni") -> None:
@@ -34,11 +43,16 @@ def project_card(title: str, tools: str, description: str, url: str = None) -> N
 
     # TITLE
     with col1:
-        title = f"[{title}]({url})" if url else title
-        st.markdown(
-            f'### <div style="text-align: left;">{title}</div>',
-            unsafe_allow_html=True,
-        )
+        if url:
+            st.markdown(
+                f'### <a href={url} style="text-align: left; color: {PRIMARY_COLOR};">{title}</a>',
+                unsafe_allow_html=True,
+            )
+        else:
+            st.markdown(
+                f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
+                unsafe_allow_html=True,
+            )
 
     # TOOLS
     with col2:
@@ -65,7 +79,10 @@ def education_card(
         duration (str): The duration of the program.
         description (str): The description of the program. Accepts markdown syntax.
     """
-    st.markdown(f"### {institution}")
+    st.markdown(
+        f'### <div style="color: {COLOR_SCHEME["theme"]["primaryColor"]};">{institution}</div>',
+        unsafe_allow_html=True,
+    )
     st.markdown(f"##### {program}")
 
     col1, col2 = st.columns(2)
@@ -83,3 +100,42 @@ def education_card(
     st.markdown(description)
 
     st.divider()
+
+
+def copyright_footer():
+    """
+    Generates the footer of the website.
+    """
+
+    st.markdown(
+        "<style>a:link, a:visited, a:hover, a:active { color: "
+        + COLOR_SCHEME["theme"]["primaryColor"]
+        + ";}</style>",
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <style>
+        footer {visibility: hidden;}
+        
+        footer:hover,  footer:active {
+            color: #ffffff;
+            background-color: transparent;
+            text-decoration: underline;
+            transition: 400ms ease 0s;
+        }
+
+        footer:after {
+            content:'© 2023 Sahil Pattni. All rights reserved.'; 
+            visibility: visible;
+            display: block;
+            position: relative;
+            padding: 5px;
+            top: 2px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.sidebar.caption("© 2023 Sahil Pattni. All rights reserved.")
