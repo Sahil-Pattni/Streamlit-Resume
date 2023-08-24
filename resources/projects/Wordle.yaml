@@ -1,0 +1,4 @@
+title: NYT Wordle Solver
+tools: Java, Selenium
+description: Created an automated application using Java and Selenium that opens a browser instance and solves the daily NYT Wordle puzzle.
+url: https://github.com/Sahil-Pattni/Wordle-Solver
