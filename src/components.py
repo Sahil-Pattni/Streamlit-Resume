@@ -42,27 +42,23 @@ def project_card(title: str, tools: str, description: str, url: str = None) -> N
         description (str): The description of the project. Accepts markdown syntax.
         url (str, optional): The URL of the project. Defaults to None.
     """
-    col1, col2 = st.columns(2)
-
-    # TITLE
-    with col1:
-        if url:
-            st.markdown(
-                f'### <a href={url} style="text-align: left; color: {PRIMARY_COLOR};">{title}</a>',
-                unsafe_allow_html=True,
-            )
-        else:
-            st.markdown(
-                f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
-                unsafe_allow_html=True,
-            )
-
-    # TOOLS
-    with col2:
+    # Title
+    if url:
         st.markdown(
-            f'#### <div style="text-align: right;">{tools}</div>',
+            f'### <a href={url} style="text-align: left; color: {PRIMARY_COLOR};">{title}</a>',
             unsafe_allow_html=True,
         )
+    else:
+        st.markdown(
+            f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
+            unsafe_allow_html=True,
+        )
+
+    # Tools
+    st.markdown(
+        f'##### <div style="text-align: left;">{tools}</div>',
+        unsafe_allow_html=True,
+    )
 
     # DESCRIPTION
     st.markdown(description)
