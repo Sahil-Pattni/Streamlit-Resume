@@ -2,3 +2,4 @@ title: VarTex
 tools: Python
 description: Developed a command line tool that generates and compiles a LaTeX template into multiple PDFs with different variables. The tool has been published on PyPi and can be installed via the pip command.
 url: https://pypi.org/project/vartex/0.0.1/
+rank: 3
