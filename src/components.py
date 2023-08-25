@@ -168,6 +168,11 @@ def format_page():
             padding: 5px;
             top: 2px;
         }
+
+        a:link, a:visited, a:hover, a:active {
+                text-decoration: none;
+        }
+        
         </style>
         """,
         unsafe_allow_html=True,

@@ -14,17 +14,5 @@ st.markdown(DESCRIPTION)
 
 st.divider()
 
-# Style the links
-st.markdown(
-    """
-    <style>
-    a:link, a:visited, a:hover, a:active {
-            text-decoration: none;
-        }
-
-    """,
-    unsafe_allow_html=True,
-)
-
 
 format_page()
