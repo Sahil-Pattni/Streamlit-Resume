@@ -1,18 +1,38 @@
 import streamlit as st
-from constants import NAME, TITLE, DESCRIPTION, PRIMARY_COLOR, SOCIALS, init
+from constants import init, THEME, INFO
 from components import format_page
 
 init()
 
 st.markdown(
-    f'# {NAME}\n### <div style="color: {PRIMARY_COLOR};">{TITLE}</div>',
+    f'# {INFO["name"]}\n### <div style="color: {THEME["primaryColor"]};">{INFO["title"]}</div>',
     unsafe_allow_html=True,
 )
 
 st.markdown("#### About Me")
-st.markdown(DESCRIPTION)
+st.markdown(INFO["description"])
 
 st.divider()
+
+c1, c2, c3 = st.columns([1, 1, 1])
+
+with c1:
+    st.markdown(
+        f"###### <div style='text-align: left;'>{INFO['number']}</div>",
+        unsafe_allow_html=True,
+    )
+
+with c2:
+    st.markdown(
+        f"###### <div style='text-align: center;'>{INFO['email']}</div>",
+        unsafe_allow_html=True,
+    )
+
+with c3:
+    st.markdown(
+        f"###### <div style='text-align: right;'>{INFO['location']}</div>",
+        unsafe_allow_html=True,
+    )
 
 
 format_page()

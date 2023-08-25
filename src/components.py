@@ -13,9 +13,9 @@ def header(section: str) -> None:
         name (str, optional): The name to be displayed in the header. Defaults to "Sahil Pattni".
     """
     st.set_page_config(
-        page_title=NAME,
+        page_title=INFO["name"],
     )
-    st.title(NAME)
+    st.title(INFO["name"])
     st.markdown(f"## {section}")
 
     # Spacer
@@ -41,7 +41,7 @@ def project_card(title: str, tools: str, description: str, url: str = None) -> N
     if url:
         description += f"\n\n[View Project]({url})"
     st.markdown(
-        f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
+        f'### <div style="text-align: left; color: {THEME["primaryColor"]};">{title}</div>',
         unsafe_allow_html=True,
     )
 
@@ -70,7 +70,7 @@ def education_card(
         description (str): The description of the program. Accepts markdown syntax.
     """
     st.markdown(
-        f'### <div style="color: {COLOR_SCHEME["theme"]["primaryColor"]};">{institution}</div>',
+        f'### <div style="color: {THEME["primaryColor"]};">{institution}</div>',
         unsafe_allow_html=True,
     )
     st.markdown(f"##### {program}")
@@ -105,7 +105,7 @@ def experience_card(
         description (str): The description of the experience. Accepts markdown syntax.
     """
     st.markdown(
-        f'### <div style="color: {COLOR_SCHEME["theme"]["primaryColor"]};">{title}</div>',
+        f'### <div style="color: {THEME["primaryColor"]};">{title}</div>',
         unsafe_allow_html=True,
     )
     st.markdown(f"##### {company}")
@@ -135,16 +135,16 @@ def format_page():
 
     st.markdown(
         "<style>a:link, a:visited, a:hover, a:active { color: "
-        + COLOR_SCHEME["theme"]["primaryColor"]
+        + THEME["primaryColor"]
         + ";}</style>",
         unsafe_allow_html=True,
     )
 
-    if "headerColor" not in COLOR_SCHEME["theme"]:
-        COLOR_SCHEME["theme"]["headerColor"] = COLOR_SCHEME["theme"]["textColor"]
+    if "headerColor" not in THEME:
+        THEME["headerColor"] = THEME["textColor"]
 
     st.markdown(
-        "<style> h1 {color: " + COLOR_SCHEME["theme"]["headerColor"] + ";} </style>",
+        "<style> h1 {color: " + THEME["headerColor"] + ";} </style>",
         unsafe_allow_html=True,
     )
 
