@@ -11,6 +11,7 @@ for filename in os.listdir("resources/projects"):
     if filename.endswith(".yaml"):
         with open(f"resources/projects/{filename}") as f:
             details = yaml.load(f, Loader=yaml.FullLoader)
+            print(details)
             if "url" not in details:
                 details["url"] = None
             if "rank" not in details:
