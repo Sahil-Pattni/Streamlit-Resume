@@ -12,9 +12,6 @@ def header(section: str) -> None:
         section (str): The section to be displayed in the header.
         name (str, optional): The name to be displayed in the header. Defaults to "Sahil Pattni".
     """
-    st.set_page_config(
-        page_title=INFO["name"],
-    )
     st.title(INFO["name"])
     st.markdown(f"## {section}")
 
@@ -132,6 +129,10 @@ def format_page():
     Applies custom styling to the page, and adds a copyright notice on
     the sidebar and footer.
     """
+
+    st.set_page_config(
+        page_title=INFO["name"],
+    )
 
     st.markdown(
         "<style>a:link, a:visited, a:hover, a:active { color: "

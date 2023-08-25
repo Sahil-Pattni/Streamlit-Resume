@@ -3,7 +3,7 @@ import math
 import yaml
 import os
 
-
+format_page()
 header("Education")
 
 # Parse education details from YAML files
@@ -28,5 +28,3 @@ for university in universities:
         university["location"],
         university["description"],
     )
-
-format_page()

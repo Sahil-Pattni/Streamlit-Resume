@@ -3,6 +3,8 @@ import math
 import yaml
 import os
 
+format_page()
+
 header("Projects")
 
 # Parse project details from YAML files
@@ -29,5 +31,3 @@ for project in projects:
         project["description"],
         project["url"],
     )
-
-format_page()

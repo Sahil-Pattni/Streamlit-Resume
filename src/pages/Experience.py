@@ -3,6 +3,7 @@ import math
 import yaml
 import os
 
+format_page()
 header("Experience")
 
 # Parse experience details from YAML files
@@ -27,6 +28,3 @@ for experience in experiences:
         experience["location"],
         experience["description"],
     )
-
-
-format_page()
