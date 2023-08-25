@@ -1,7 +1,6 @@
 # Streamlit Personal Website Template
 
 ![screenshot](resources/images/retro_screenshot.png)
-minimal theme
 <div style="display: flex; justify-content: space-between;">
     <img src="resources/images/slate_screenshot.png" alt="Slate Screenshot" width="49%">
     <img src="resources/images/minimal_screenshot.png" alt="Minimal Screenshot" width="49%">
