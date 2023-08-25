@@ -1,8 +1,12 @@
 # Streamlit Personal Website Template
 
-![screenshot](resources/images/retro_screenshot.png)
 <div style="display: flex; justify-content: space-between;">
-    <img src="resources/images/slate_screenshot.png" alt="Slate Screenshot" width="49%">
+    <img src="resources/images/retro_screenshot.png" alt="Slate Screenshot" width="49%">
+    <img src="resources/images/slate_screenshot.png" alt="Minimal Screenshot" width="49%">
+</div>
+<br>
+<div style="display: flex; justify-content: space-between;">
+    <img src="resources/images/bright_screenshot.png" alt="Slate Screenshot" width="49%">
     <img src="resources/images/minimal_screenshot.png" alt="Minimal Screenshot" width="49%">
 </div>
 
