@@ -4,7 +4,7 @@ from constants import *
 init()
 
 
-def header(section: str, name: str = "Sahil Pattni") -> None:
+def header(section: str) -> None:
     """
     Generates the header of the website.
 
@@ -13,9 +13,9 @@ def header(section: str, name: str = "Sahil Pattni") -> None:
         name (str, optional): The name to be displayed in the header. Defaults to "Sahil Pattni".
     """
     st.set_page_config(
-        page_title="Sahil Pattni",
+        page_title=NAME,
     )
-    st.title(name)
+    st.title(NAME)
     st.markdown(f"## {section}")
 
     # Spacer
