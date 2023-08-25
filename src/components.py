@@ -36,17 +36,14 @@ def project_card(title: str, tools: str, description: str, url: str = None) -> N
         description (str): The description of the project. Accepts markdown syntax.
         url (str, optional): The URL of the project. Defaults to None.
     """
-    # Title
+
+    # Add link to project
     if url:
-        st.markdown(
-            f'### <a href={url} style="text-align: left; color: {PRIMARY_COLOR};">{title}</a>',
-            unsafe_allow_html=True,
-        )
-    else:
-        st.markdown(
-            f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
-            unsafe_allow_html=True,
-        )
+        description += f"\n\n[View Project]({url})"
+    st.markdown(
+        f'### <div style="text-align: left; color: {PRIMARY_COLOR};">{title}</div>',
+        unsafe_allow_html=True,
+    )
 
     # Tools
     st.markdown(
@@ -175,4 +172,18 @@ def format_page():
         """,
         unsafe_allow_html=True,
     )
+
+    # Socials
+
+    st.sidebar.markdown(
+        f"""
+        ####
+        #### <a href='{SOCIALS['linkedin']}' target='_blank'>LinkedIn</a><br>
+        #### <a href='{SOCIALS['github']}' target='_blank'>GitHub</a><br>
+        #### <a href='{SOCIALS['email']}' target='_blank'>Email</a><br>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Copyright
     st.sidebar.caption("© 2023 Sahil Pattni. All rights reserved.")

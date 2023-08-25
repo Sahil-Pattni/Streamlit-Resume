@@ -18,10 +18,13 @@ import yaml
 
 NAME, TITLE, DESCRIPTION = None, None, None
 
+# Socials
+SOCIALS = None
+
 
 def init():
     global COLOR_SCHEME, PRIMARY_COLOR, BACKGROUND_COLOR, SECONDARY_BACKGROUND_COLOR, TEXT_COLOR
-    global NAME, TITLE, DESCRIPTION
+    global NAME, TITLE, DESCRIPTION, SOCIALS
 
     # Get color cheme
     COLOR_SCHEME = toml.load(".streamlit/config.toml")
@@ -38,6 +41,13 @@ def init():
     except:
         print("Error: Could not load personal information.")
         exit(1)
+
+    # Load socials
+    try:
+        with open("resources/socials.yaml") as f:
+            SOCIALS = yaml.load(f, Loader=yaml.FullLoader)
+    except:
+        print("Error: Could not load socials.")
 
 
 init()
