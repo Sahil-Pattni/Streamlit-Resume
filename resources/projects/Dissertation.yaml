@@ -1,5 +1,0 @@
-title: Undergraduate Dissertation
-tools: Python, Rust
-description: Final year undergraduate dissertation. Introduced and examined an improvement to a novel approach for the generate association rule itemsets from a retail database of ≈ 1.4 million transactions, using Minimum Spanning Trees to capture the association between products, and Markov Clustering to segregate products on the tree.
-url: https://github.com/Sahil-Pattni/Market-Basket-Analysis-with-Graph-Theory/
-rank: 2

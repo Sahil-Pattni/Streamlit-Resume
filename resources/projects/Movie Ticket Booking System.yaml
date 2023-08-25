@@ -1,3 +1,0 @@
-title: Distributed Movie Ticket Booking System
-tools: Java
-description: For a graduate course, I led a team of four students in developing a fault-tolerant, actively-replicated movie ticket booking system using Java Web Services. The application was implemented with a failure-free sequencer for message synchronization and designed to handle both software failures and process crashes.
