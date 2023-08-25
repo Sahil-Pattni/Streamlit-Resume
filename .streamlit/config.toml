@@ -32,3 +32,6 @@ headerColor="#EA5455"
 
 [client]
 toolbarMode="minimal"
+
+[server]
+port=8080
