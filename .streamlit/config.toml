@@ -23,11 +23,12 @@
 
 # Light Grey x Blue
 [theme]
-primaryColor="#3E61E3"
-backgroundColor="#D8D2D6"
-secondaryBackgroundColor="#cecacc"
+primaryColor="#3e61e3"
+backgroundColor="#f1eef0"
+secondaryBackgroundColor="#e6e6e6"
 textColor="#000000"
 headerColor="#C2492F"
+
 
 # # Light Grey x Red
 # [theme]
