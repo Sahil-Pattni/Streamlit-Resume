@@ -1,13 +1,7 @@
 import streamlit as st
-import toml
-import os
+from constants import *
 
-# Get color cheme
-COLOR_SCHEME = toml.load(".streamlit/config.toml")
-PRIMARY_COLOR = COLOR_SCHEME["theme"]["primaryColor"]
-BACKGROUND_COLOR = COLOR_SCHEME["theme"]["backgroundColor"]
-SECONDARY_BACKGROUND_COLOR = COLOR_SCHEME["theme"]["secondaryBackgroundColor"]
-TEXT_COLOR = COLOR_SCHEME["theme"]["textColor"]
+init()
 
 
 def header(section: str, name: str = "Sahil Pattni") -> None:
@@ -149,11 +143,19 @@ def format_page():
         unsafe_allow_html=True,
     )
 
+    if "headerColor" not in COLOR_SCHEME["theme"]:
+        COLOR_SCHEME["theme"]["headerColor"] = COLOR_SCHEME["theme"]["textColor"]
+
+    st.markdown(
+        "<style> h1 {color: " + COLOR_SCHEME["theme"]["headerColor"] + ";} </style>",
+        unsafe_allow_html=True,
+    )
+
     st.markdown(
         """
         <style>
         footer {visibility: hidden;}
-        
+
         footer:hover,  footer:active {
             color: #ffffff;
             background-color: transparent;
