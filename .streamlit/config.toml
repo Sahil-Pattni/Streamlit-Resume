@@ -27,6 +27,7 @@ primaryColor="#3E61E3"
 backgroundColor="#D8D2D6"
 secondaryBackgroundColor="#cecacc"
 textColor="#000000"
+headerColor="#C2492F"
 
 # # Light Grey x Red
 # [theme]
@@ -34,3 +35,11 @@ textColor="#000000"
 # backgroundColor="#E1DFE4"
 # secondaryBackgroundColor="#dedce3"
 # textColor="#727272"
+
+# # Retro
+# [theme]
+# primaryColor="#EA5455"
+# backgroundColor="#F9F5EB"
+# secondaryBackgroundColor="#E4DCCF"
+# textColor="#002B5B"
+# headerColor="#EA5455"
