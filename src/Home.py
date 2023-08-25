@@ -1,12 +1,11 @@
 import streamlit as st
-from constants import NAME, TITLE, DESCRIPTION, PRIMARY_COLOR
+from constants import NAME, TITLE, DESCRIPTION, PRIMARY_COLOR, init
 from components import format_page
 
-# init()
-# st.title("Sahil Pattni")
+init()
 
 st.markdown(
-    f'# Sahil Pattni\n### <div style="color: {PRIMARY_COLOR};">{TITLE}</div>',
+    f'# {NAME}\n### <div style="color: {PRIMARY_COLOR};">{TITLE}</div>',
     unsafe_allow_html=True,
 )
 
