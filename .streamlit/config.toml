@@ -5,23 +5,7 @@
 # secondaryBackgroundColor="#526d82"
 # textColor="#f5f5fb"
 
-# # Dark Blue
-# [theme]
-# primaryColor="#00adb5"
-# backgroundColor="#222831"
-# secondaryBackgroundColor="#393e46"
-# textColor="#eeeeee"
-
-
-# # Light Beige x Orange
-# [theme]
-# primaryColor="#F37A1F"
-# backgroundColor="#D0D0C4"
-# secondaryBackgroundColor="#D0D0C4"
-# textColor="#393939"
-
-
-# # Light Grey x Blue
+# # Slate
 # [theme]
 # primaryColor="#3e61e3"
 # backgroundColor="#f1eef0"
@@ -37,10 +21,26 @@
 # secondaryBackgroundColor="#dedce3"
 # textColor="#727272"
 
-# Retro
+# # Retro
+# [theme]
+# primaryColor="#3e61e3"
+# backgroundColor="#F9F5EB"
+# secondaryBackgroundColor="#E4DCCF"
+# textColor="#002B5B"
+# headerColor="#EA5455"
+
+# # Bright
+# [theme]
+# primaryColor="#F64C72"
+# backgroundColor="#2F2FA2"
+# secondaryBackgroundColor="#242582"
+# textColor="#FFFFFF"
+# headerColor="#F64C72"
+
+# Minimal
 [theme]
-primaryColor="#3e61e3"
-backgroundColor="#F9F5EB"
-secondaryBackgroundColor="#E4DCCF"
-textColor="#002B5B"
-headerColor="#EA5455"
+primaryColor="#000000"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#FFFFFF"
+textColor="#000000"
+# headerColor="#F64C72"
